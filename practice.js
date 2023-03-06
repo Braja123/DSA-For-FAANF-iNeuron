@@ -1,9 +1,3 @@
-// 1. Given an integer array nums of length n and an integer target, find three integers in nums
-// such that the sum is closest to the target.[Amazon]
-// You need to return the sum of three integers.
-// For example:arr = [-1, 2, 1, -4], target = 1
-// Output: 2
-// Explanation: [-1+2+1] = 2 (The sum that is closest to the target is 2)
 
 let arr = [-1, 2, 1, -4];
 let target = 1;
