@@ -1,0 +1,29 @@
+Lect: 7
+1 -  Check the number is available in the array or not, if available then return the index. -> Common Questions - findElement.js
+2 - Find the given number index -> Common Questions - binarySearch.js
+3 - Find the sum of given data indexes  -> Common Questions - twoPointerSum.js
+4 - find the maximum profit -> Common Questions - findMaxProfit.js
+5 - Check the target number is present or not in 2D Array -> 2D Array - checkNumber.js
+- And some other Binary Search(Hypothetical Questions) Questions solved
+- Solve Questions of - Assignment 5
+
+Lect: 8
+6 - Find the given number index using ternary search -> Common Questions - ternarySearch.js
+7 - Bubble Sort -> Sort - bubbleSort.js
+8 - Selection Sort -> Sort - selectionSort.js
+
+- In Ternary search we are incrasing more comparision that why it is not more preferble - Need to write in GDrive Note
+
+Lect 9:
+9 - Insertion Sort -> Sort - insertionSort.js
+
+Lect 10: 
+Heap DS:
+Solve Questions of - Assignment 6
+
+Lect 12:
+10 - Find Minimum and maximum number of an array. - Divide and Conqure -> findMinAndMax.js
+11 - Find how many ways we can reach at a perticular/nth step - Divide and Conqure -> findWaysOfStairs.js
+12 - Find the power of element - Divide and Conqure -> powerOfElement.js
+Solve Questions of - Assignment 6
+
