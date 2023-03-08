@@ -1,26 +1,78 @@
+// Implementation of Merge Sort
+// function definition of merge Procedure
+// n1+n2 = N
+// MergeProcedure time complexity = O(N)
 
-let arr = [-1, 2, 1, -4];
-let target = 1;
+function mergeProcedure(arr, start, mid, end) {
+  // length of the left sub-arr
+  let n1 = mid - start + 1;
 
-const closestTarget = (arr1, target, num) => {
-  let closetSum = 1000;
-  let sortArr = arr.sort((a,b) => a-b);
-  for(let i=0; i<sortArr.length; i++) {
-    let left = i+1;
-    let right = arr.length - 1;
+  // length of the right sub-arr
+  let n2 = end - mid;
 
-    while(left <= right) {
-      let sum = arr[i] + arr[left] + arr[right];
-      if(Math.abs(target - sum) < Math.abs(target - closetSum)) {
-        closetSum = sum;
-      } else if(sum > target) {
-        right--;
-      } else {
-        left++;
-      }
-    }
+  // empty arr for left sub-arr
+  let left = [];
+
+  // empty arr for right sub-arr
+  let right = [];
+
+  // check the length of left sub-arr and store the value
+  for (let i = 0; i < n1; i++) {
+    left[i] = arr[start + i];
   }
-  return closetSum;
+
+  // check the length of right sub-arr and store the value
+  for (let j = 0; j < n2; j++) {
+    right[j] = arr[mid + 1 + j];
+  }
+  
+  let i = 0;
+  let j = 0;
+  let k = start;
+  while (i < n1 && j < n2) {
+    if (left[i] <= right[j]) {
+      arr[k] = left[i];
+      i++;
+    } else {
+      arr[k] = right[j];
+      j++;
+    }
+    k++;
+  }
+  while (i < n1) {
+    arr[k] = left[i];
+    i++;
+    k++;
+  }
+  while (j < n2) {
+    arr[k] = right[j];
+    j++;
+    k++;
+  }
 }
 
-console.log(closestTarget(arr, target, 3));
+// MergeSort function definition
+// MergeSort time complexity = O(NlogN)
+
+function mergeSort(arr, start, end) {
+  if (start < end) {
+    // Divide
+    let mid = start + Math.floor((end - start) / 2);
+    // Conquer
+    // Recursive call for left subtree
+    mergeSort(arr, start, mid);
+    // Recursive call for right subtree
+    mergeSort(arr, mid + 1, end);
+    // Combine --> Merge Procedure
+    mergeProcedure(arr, start, mid, end);
+  }
+  return arr;
+}
+
+// Driver code
+const arr = [50, 70, 65, 13, 80, 62, 98, 27];
+const start = 0;
+const end = arr.length - 1;
+// function calling
+const result = mergeSort(arr, start, end);
+console.log('The sorted array is:', result);

@@ -8,7 +8,7 @@
 let arr = [-1, 2, 1, -4];
 let target = 1;
 
-const closestTarget = (arr1, target, num) => {
+const closestTarget = (arr, target) => {
   let closetSum = 1000;
   let sortArr = arr.sort((a,b) => a-b);
   for(let i=0; i<sortArr.length; i++) {
@@ -29,7 +29,7 @@ const closestTarget = (arr1, target, num) => {
   return closetSum;
 }
 
-let res = closestTarget(arr, target, 3);
+let res = closestTarget(arr, target);
 console.log(res);
 
 
